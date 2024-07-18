@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(4,minmax(100px,1fr));
+            grid-template-rows: 5vh 5vh 30vh 45vh 10vh;
+        }
+        .header{
+              background-color: aqua;
+             grid-row-start: 1;
+             grid-row-end: 2;
+             grid-column-start: 1;
+             grid-column-end: 5;
+        }
+        .nav{
+            background-color: blue;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+        .sidebar{
+            background-color: brown;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+        .fig{
+            background-color: blueviolet;
+            grid-row-start: 4;
+        }
+        .main{
+            background-color: blanchedalmond;
+            grid-row-start: 3;
+            grid-row-end: 5;
+            grid-column-start: 2;
+            grid-column-end: 5;
+             display: flex;
+            align-content: center;
+               justify-content: center;
+               align-items: center;
+               flex-direction: column;
+        }
+        .article1{
+               background-color: chartreuse; /*it is working when im giving displayflex why?*/ 
+              align-self:flex-start; 
+              
+        }
+        .article2{
+            background-color: rgb(255, 0, 43);
+
+        }
+        .footer{
+            background-color: coral;
+            grid-row-start: 5;
+            grid-row-end: 6;
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="header">header</section>
+        <section class="nav">navigation</section>
+        <section class="sidebar">sidebar</section>
+        <section class="fig">figure</section>
+        <section class="main">main
+            <div class="article1">article1</div>
+            <div class="article2">article2</div>
+        </section>
+        <section class="footer">footer</section>
+    </div>
+</body>
+</html>
